@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Arguments — Blueprint for a New Europe</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;font-family:Georgia,serif;color:#111}
+button{appearance:none;-webkit-appearance:none;border:none;background:none;cursor:pointer;padding:0;font-family:Georgia,serif}
+
+.site-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;padding:16px 80px;display:flex;justify-content:space-between;align-items:center;z-index:200}
+.site-logo{font-size:16px;color:#111;text-decoration:none;font-family:Georgia,serif}
+.site-links{display:flex;gap:32px}
+.site-links a{font-size:14px;color:#333;text-decoration:none}
+.site-links a:hover{color:#5b2a86}
+
+.hero{padding:80px 80px 60px;border-bottom:1px solid #eee}
+.hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.eyebrow-hero{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#5b2a86;margin-bottom:24px;display:block}
+.hero-head{font-size:64px;font-weight:400;line-height:1.05;color:#111}
+.intro-line{font-size:20px;line-height:1.5;color:#111;margin-bottom:16px}
+.intro-trio{margin:24px 0 32px}
+.intro-trio p{font-size:18px;line-height:1.7;color:#333;margin-bottom:2px}
+.cta-row{display:flex;gap:32px}
+.cta-link{font-size:14px;color:#333;text-decoration:none}
+.cta-link:hover{color:#5b2a86}
+
+.filter-wrap{padding:28px 80px 24px;border-bottom:1px solid #eee}
+.filter-type-row{display:flex;align-items:center;justify-content:center;gap:40px;margin-bottom:20px}
+.filter-lbl{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-right:8px}
+.type-btn{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 16px;border:0.5px solid #ccc;border-radius:20px;color:#666;cursor:pointer;transition:all 0.15s}
+.type-btn:hover{border-color:#5b2a86;color:#5b2a86}
+.type-btn.on{background:#5b2a86;color:#fff;border-color:#5b2a86}
+.filter-pillar-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.pillar-btn{font-size:10px;padding:5px 10px;border:0.5px solid #ddd;border-radius:4px;cursor:pointer;color:#888;text-align:center;line-height:1.3;transition:all 0.15s;white-space:nowrap}
+.pillar-btn .pnum{font-size:9px;color:#bbb;display:block}
+.pillar-btn .pname{font-size:10px;color:#777;display:block}
+.pillar-btn:hover,.pillar-btn.on{border-color:#5b2a86}
+.pillar-btn.on .pnum,.pillar-btn.on .pname{color:#5b2a86}
+
+.card-grid{padding:40px 80px 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+
+.card{
+  border:1.5px solid #5b2a86;
+  border-radius:10px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  background:#f8f7f4;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size:256px;
+  transition:transform 0.2s;
+}
+.card:hover{transform:translateY(-3px)}
+.card.hidden{display:none}
+.card-purple{
+  background:#5b2a86;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  background-size:256px;
+}
+
+.card-top{padding:18px 22px 12px}
+.eyebrow{font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-purple .eyebrow{color:rgba(255,255,255,0.35)}
+.top-hairline{height:0.5px;background:#e0e0e0;margin:0 22px}
+.card-purple .top-hairline{background:rgba(255,255,255,0.15)}
+
+.card-body{padding:22px 22px 18px;flex:1}
+
+/* DETONATOR sizes */
+.det-t1{font-size:48px;font-weight:400;line-height:1.08;color:#5b2a86;margin:0 0 18px;word-wrap:break-word}
+.det-t2{font-size:38px;font-weight:400;line-height:1.1;color:#5b2a86;margin:0 0 18px;word-wrap:break-word}
+.det-t3{font-size:28px;font-weight:400;line-height:1.15;color:#5b2a86;margin:0 0 18px;word-wrap:break-word}
+.det-white-t1{font-size:48px;font-weight:400;line-height:1.08;color:#f8f7f4;margin:0 0 20px;text-transform:uppercase;word-wrap:break-word}
+.det-white-t2{font-size:38px;font-weight:400;line-height:1.1;color:#f8f7f4;margin:0 0 20px;text-transform:uppercase;word-wrap:break-word}
+.det-white-t3{font-size:28px;font-weight:400;line-height:1.15;color:#f8f7f4;margin:0 0 20px;text-transform:uppercase;word-wrap:break-word}
+
+.det-rule{width:32px;height:1.5px;background:#5b2a86;margin:0 0 16px;flex-shrink:0}
+.det-rule-white{width:32px;height:1.5px;background:rgba(255,255,255,0.3);margin:0 0 16px;flex-shrink:0}
+.det-sub{font-size:15px;color:#444;line-height:1.6;margin:0}
+.det-sub-white{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;margin:0}
+.det-sub-bold{font-size:17px;font-weight:400;color:#111;line-height:1.4;margin:0 0 10px}
+
+/* EVIDENCE */
+.stat-num{font-size:80px;font-weight:400;line-height:1;color:#5b2a86;margin:0 0 8px;word-wrap:break-word}
+.stat-rule{width:32px;height:1.5px;background:#5b2a86;margin:0 0 14px}
+.stat-label{font-size:20px;font-weight:400;color:#111;line-height:1.3;margin:0}
+.mid-hairline{height:0.5px;background:#e0e0e0;margin:18px 22px}
+.stat-body{padding:0 22px 18px;font-size:16px;color:#333;line-height:1.6}
+
+/* FIX */
+.fix-head{font-size:38px;font-weight:400;line-height:1.1;color:#5b2a86;margin:0 0 16px;word-wrap:break-word}
+.fix-rule{width:32px;height:1.5px;background:#5b2a86;margin:0 0 16px}
+.fix-phrase{font-size:22px;font-weight:400;color:#111;line-height:1.3;margin:0 0 12px}
+.fix-body{font-size:15px;color:#444;line-height:1.6;margin:0}
+.fix-block{border:1px solid #5b2a86;border-radius:8px;padding:14px 16px;margin-top:16px}
+.fix-block-label{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:#5b2a86;margin:0 0 6px;display:block}
+.fix-block-body{font-size:14px;color:#444;line-height:1.55;margin:0}
+
+/* FOOTER */
+.card-foot{border-top:0.5px solid #e0e0e0;padding:12px 22px 8px;display:flex;justify-content:space-between;align-items:center}
+.card-purple .card-foot{border-top-color:rgba(255,255,255,0.15)}
+.act{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:#888}
+.act:hover{color:#5b2a86}
+.card-purple .act{color:rgba(255,255,255,0.35)}
+.card-purple .act:hover{color:rgba(255,255,255,0.8)}
+.brand{text-align:center;font-size:9px;letter-spacing:0.06em;color:#bbb;padding:4px 22px 14px}
+.card-purple .brand{color:rgba(255,255,255,0.2)}
+
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:#111;color:#fff;font-size:13px;padding:10px 24px;border-radius:24px;opacity:0;transition:all 0.3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.footer{border-top:1px solid #eee;padding:32px 80px;display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:13px;color:#888}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:13px;color:#888;text-decoration:none}
+.footer-links a:hover{color:#5b2a86}
+
+@media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr);padding:24px}.hero{padding:40px 24px}.hero-layout{grid-template-columns:1fr}.hero-head{font-size:40px}.filter-wrap{padding:24px}.site-nav{padding:16px 24px}}
+@media(max-width:600px){.card-grid{grid-template-columns:1fr;padding:16px}}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="site-logo" href="https://blueprint-for-a-new-europe-9fa293.webflow.io">Blueprint</a>
+  <div class="site-links">
+    <a href="https://blueprint-for-a-new-europe-9fa293.webflow.io/#argument">The Case</a>
+    <a href="https://blueprint-for-a-new-europe-9fa293.webflow.io/#pillars">The Architecture</a>
+    <a href="https://blueprint-for-a-new-europe-9fa293.webflow.io/#book">Get the Book</a>
+    <a href="https://blueprintforaneweurope.github.io/Sources/">Sources</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-layout">
+    <div>
+      <span class="eyebrow-hero">The Arguments</span>
+      <h1 class="hero-head">Fragments built to travel.</h1>
+    </div>
+    <div>
+      <p class="intro-line">Steal one argument. Start a conversation.</p>
+      <div class="intro-trio">
+        <p>Diagnosis tells you what's broken.</p>
+        <p>Debate tells you who to blame.</p>
+        <p>The Blueprint shows you what works.</p>
+      </div>
+      <div class="cta-row">
+        <a class="cta-link" href="https://blueprint-for-a-new-europe-9fa293.webflow.io/#book">Get the book →</a>
+        <a class="cta-link" href="https://blueprintforaneweurope.github.io/Sources/">All sources →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filter-wrap">
+  <div class="filter-type-row">
+    <span class="filter-lbl">Filters</span>
+    <button class="type-btn on" data-type="all">All</button>
+    <button class="type-btn" data-type="detonator">Detonator</button>
+    <button class="type-btn" data-type="evidence">Evidence</button>
+    <button class="type-btn" data-type="fix">Fix</button>
+  </div>
+  <div class="filter-pillar-row">
+    <button class="pillar-btn" data-pillar="01"><span class="pnum">01</span><span class="pname">Fair Pay</span></button>
+    <button class="pillar-btn" data-pillar="02"><span class="pnum">02</span><span class="pname">Taxes</span></button>
+    <button class="pillar-btn" data-pillar="03"><span class="pnum">03</span><span class="pname">Trade</span></button>
+    <button class="pillar-btn" data-pillar="04"><span class="pnum">04</span><span class="pname">Education</span></button>
+    <button class="pillar-btn" data-pillar="05"><span class="pnum">05</span><span class="pname">Healthcare</span></button>
+    <button class="pillar-btn" data-pillar="06"><span class="pnum">06</span><span class="pname">Housing</span></button>
+    <button class="pillar-btn" data-pillar="07"><span class="pnum">07</span><span class="pname">Drug Policy</span></button>
+    <button class="pillar-btn" data-pillar="08"><span class="pnum">08</span><span class="pname">Climate</span></button>
+    <button class="pillar-btn" data-pillar="09"><span class="pnum">09</span><span class="pname">Defence</span></button>
+    <button class="pillar-btn" data-pillar="10"><span class="pnum">10</span><span class="pname">Justice</span></button>
+    <button class="pillar-btn" data-pillar="11"><span class="pnum">11</span><span class="pname">Media</span></button>
+    <button class="pillar-btn" data-pillar="12"><span class="pnum">12</span><span class="pname">Anti-Corruption</span></button>
+    <button class="pillar-btn" data-pillar="13"><span class="pnum">13</span><span class="pname">Institutions</span></button>
+    <button class="pillar-btn" data-pillar="14"><span class="pnum">14</span><span class="pname">Technology</span></button>
+    <button class="pillar-btn" data-pillar="15"><span class="pnum">15</span><span class="pname">Cultural Identity</span></button>
+  </div>
+</div>
+
+<div class="card-grid" id="grid">
+<div class="card" data-pillar="01" data-type="detonator" id="card-1">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">No person should earn in one year<br>what another earns<br>in a lifetime.</p><div class="det-rule"></div><p class="det-sub">The 40-Year Rule caps CEO pay at 40× the lowest full-time wage in the same company. It&#x27;s not punishment. It&#x27;s proportion.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(1)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(1)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(1)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="detonator" id="card-2">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Capital adapts to structure.<br>It always has.<br>The structure just changed.</p><div class="det-rule"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(2)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(2)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(2)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="fix" id="card-3">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Alignment replaced extraction.<br>The company got better.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">When the floor rises, the ceiling follows.</span>
+      <p class="fix-block-body">That is not ideology. That is design.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(3)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(3)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(3)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="evidence" id="card-4">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">400:1</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">pay ratio before reform.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">The ratio at a typical European logistics company. Under the 40-Year Rule, the legal ceiling is 40:1.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(4)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(4)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(4)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="evidence" id="card-5">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">20,000</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">years of work to match one CEO year.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">That is how long the average Tesla worker would need to work to match one year of Elon Musk&#x27;s 2023 compensation. At that scale, pay stops describing merit.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(5)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(5)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(5)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="detonator" id="card-6">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">The executives who left<br>for maximum-compensation jurisdictions.<br>They were a specific type.</p><div class="det-rule"></div><p class="det-sub">Short-horizon thinkers, optimised for extraction. Their departure created space for something better.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(6)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(6)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(6)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="evidence" id="card-7">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">193:1</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">average ratio in the study sample.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">The IFN analysis found that pay gaps above roughly 40:1 stop motivating performance and start damaging productivity.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(7)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(7)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(7)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="evidence" id="card-8">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">70%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of team engagement depends on managers.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">When reward loses proportion, democracy loses oxygen. A system that treats workers as disposable should not be surprised when trust collapses.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(8)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(8)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(8)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="01" data-type="fix" id="card-9">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 01 — Fair Pay</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Stop chasing the extractors.<br>Start attracting the builders.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">A 40:1 structure selects for a different kind of talent.</span>
+      <p class="fix-block-body">The one that makes organisations better rather than richer at the top.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(9)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(9)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(9)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="detonator" id="card-10">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Capital can cross borders.<br>Taxes cannot.</p><div class="det-rule"></div><p class="det-sub">The structural gap that drains European democracies of the revenue they were promised.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(10)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(10)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(10)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="02" data-type="detonator" id="card-11">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">Europe didn't lose<br>control of taxation.<br><br>It gave it away.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(11)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(11)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(11)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="detonator" id="card-12">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">The system punishes the honest<br>and rewards the clever.</p><div class="det-rule"></div><p class="det-sub">Until the architecture changes, compliance is a competitive disadvantage.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(12)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(12)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(12)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="evidence" id="card-13">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€4 Trillion</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">flowing through Dutch shell entities annually.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Most of which exist solely to avoid tax obligations elsewhere.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(13)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(13)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(13)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="evidence" id="card-14">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">0.005%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">Apple&#x27;s effective European tax rate in 2014.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Five thousandths of one percent. The Commission ordered Ireland to recover €13 billion. Ireland appealed.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(14)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(14)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(14)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="detonator" id="card-15">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">The ward Sofia works in<br>is understaffed by a thousand nurses<br>who couldn't be hired.<br><br><br>€106 billion leaves Europe annually through offshore wealth sheltering.<br>That money was real.<br>Those nurses are also real.</p><div class="det-rule"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(15)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(15)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(15)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="evidence" id="card-16">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€44bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">Amazon revenue in Luxembourg. Corporate tax paid: zero.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Marcel&#x27;s bakery has no Dutch holding company. It has an oven, employees, and the full tax code.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(16)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(16)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(16)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="02" data-type="fix" id="card-17">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 02 — Taxes</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">The architecture for fair taxation<br>is no longer fantasy.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">140 countries agreed. The teeth do not yet exist.</span>
+      <p class="fix-block-body">Europe does not need another declaration. It needs to make the system apply to those sophisticated enough to escape it.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(17)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(17)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(17)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="03" data-type="detonator" id="card-18">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">YOU CAN'T<br>OUTSOURCE<br>GUILT.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(18)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(18)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(18)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="03" data-type="detonator" id="card-19">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">We subsidize<br>our own destruction.</p><div class="det-rule"></div><p class="det-sub">European consumers fund the supply chains that undercut European labour and climate standards.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(19)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(19)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(19)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="03" data-type="detonator" id="card-20">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">A TRADE<br>AGREEMENT THAT IGNORES<br>LABOUR STANDARDS<br>IS NOT FREE TRADE.<br><br>IT IS ARBITRAGE WEARING A FLAG.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(20)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(20)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(20)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="03" data-type="evidence" id="card-21">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">500%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">rise in Piraeus container traffic after COSCO acquisition.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">COSCO bought 67% of Piraeus Port for €368 million. Container traffic rose 500%. Worker wages did not.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(21)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(21)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(21)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="03" data-type="evidence" id="card-22">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€8bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">Netflix European subscription revenue.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Fraction reinvested in locally produced content: negligible. If you profit from the hive, you tend the hive.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(22)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(22)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(22)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="03" data-type="evidence" id="card-23">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€150–200bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">shifted out of Europe every year.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">This is not free trade. It is extraction made legal. The wealth is created here. The contribution should stay here too.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(23)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(23)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(23)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="03" data-type="evidence" id="card-24">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">40%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of a digital transaction captured by platforms.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">The new tariff is invisible. Europe knows how to tax steel. It still struggles to tax the gatekeepers.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(24)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(24)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(24)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="03" data-type="fix" id="card-25">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 03 — Trade</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Reciprocity is not aggression.<br>It is the minimum grammar<br>of adulthood in global trade.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">Conditional always beats unconditional.</span>
+      <p class="fix-block-body">Europe opens its markets while its partners screen, condition, block, subsidise, and protect.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(25)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(25)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(25)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="detonator" id="card-26">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">The country that educates best<br>governs best.</p><div class="det-rule"></div><p class="det-sub">Education is not a welfare payment. It is the infrastructure of everything that follows.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(26)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(26)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(26)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="04" data-type="detonator" id="card-27">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">TEACHING TO THE TEST<br>PRODUCES PEOPLE WHO PASS TESTS.<br><br>EUROPE NEEDS PEOPLE<br>WHO SOLVE PROBLEMS.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(27)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(27)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(27)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="detonator" id="card-28">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Curriculum is not neutral.<br>It reflects what a society<br>thinks is worth knowing.</p><div class="det-rule"></div><p class="det-sub">And what it thinks the next generation is worth.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(28)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(28)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(28)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="detonator" id="card-29">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">A child born in the wrong postcode<br>has already lost the first round.</p><div class="det-rule"></div><p class="det-sub">Not because they are less capable. Because the system was not designed with them in mind.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(29)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(29)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(29)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="evidence" id="card-30">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">30 years</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">compounding return on vocational investment.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">The countries that invested in vocational education in the 1990s have the lowest youth unemployment today. That is not luck.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(30)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(30)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(30)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="detonator" id="card-31">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">1997 curriculum.<br>2024 reality.</p><div class="det-rule"></div><p class="det-sub">Marta graduated from the same school as her mother, but not into the same economy. The school did not fail her because she was weak. It failed her because it fossilized.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(31)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(31)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(31)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="detonator" id="card-32">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Children are sorted<br>at 10 or 11.</p><div class="det-rule"></div><p class="det-sub">A diploma should open doors, not close them. Tracking at that age is not guidance. It is premature verdict dressed as pedagogy.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(32)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(32)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(32)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="04" data-type="fix" id="card-33">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 04 — Education</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Teachers are not delivery mechanisms.<br>They are democratic infrastructure.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">A society that underpays teachers</span>
+      <p class="fix-block-body">should stop pretending it is confused by weak citizenship.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(33)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(33)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(33)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="05" data-type="detonator" id="card-34">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">A HEALTHCARE SYSTEM<br>THAT BANKRUPTS PATIENTS<br><br>HAS MISUNDERSTOOD<br>ITS PURPOSE.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(34)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(34)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(34)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="05" data-type="detonator" id="card-35">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">HEALTH IS NOT A REWARD<br>FOR GOOD CHOICES.<br><br>IT IS THE CONDITION FOR<br>MAKING ANY CHOICES AT ALL.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(35)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(35)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(35)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="05" data-type="evidence" id="card-36">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">11%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of Europeans forgo treatment due to cost.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">In the world&#x27;s wealthiest continent. That is not a market signal. That is a system signal.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(36)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(36)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(36)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="05" data-type="fix" id="card-37">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Prevention is<br>cheaper than cure.<br><br>Europe funds the cure<br>and debates the prevention.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">Every euro on early intervention saves seven in acute care.</span>
+      <p class="fix-block-body">The arithmetic is not disputed. The political will is.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(37)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(37)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(37)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="05" data-type="fix" id="card-38">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Waiting lists are a policy choice,<br>not a natural phenomenon.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">They reflect how a society distributes a scarce resource.</span>
+      <p class="fix-block-body">That decision can be made differently.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(38)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(38)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(38)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="05" data-type="detonator" id="card-39">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">€3–5 to make insulin.<br>€50–150 paid by patients.<br>The public pays twice.</p><div class="det-rule"></div><p class="det-sub">That is not innovation. It is rent-seeking with a laboratory coat.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(39)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(39)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(39)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="05" data-type="evidence" id="card-40">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 05 — Healthcare</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€1.7 Trillion</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">in European health spending.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">€259 million reimbursed cross-border. Machines sit dark at night in one country while patients wait months in another. The scandal is not scarcity. It is coordination failure.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(40)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(40)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(40)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="06" data-type="detonator" id="card-41">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 06 — Housing</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">EUROPE'S HOUSING<br>SHORTAGE IS A<br>REGULATORY FAILURE,<br>NOT A MARKET ONE.<br><br>THE HOMES ARE NOT MISSING.<br><br>THE PERMISSIONS ARE.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(41)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(41)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(41)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="06" data-type="detonator" id="card-42">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 06 — Housing</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Speculative land-banking<br>is not investment.<br><br>It is extraction from people<br>who need somewhere to live.</p><div class="det-rule"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(42)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(42)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(42)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="06" data-type="detonator" id="card-43">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 06 — Housing</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">A generation did not become irresponsible.<br><br>The ladder was pulled up.</p><div class="det-rule"></div><p class="det-sub">In 1990, many young Europeans could buy with three to four years of median salary. By 2023, major cities demanded eight to twelve. The crisis is not lifestyle. It is arithmetic.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(43)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(43)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(43)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="06" data-type="evidence" id="card-44">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 06 — Housing</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">3M+</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">vacant homes in France. 3M+ in Spain.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Millions of empty homes. Millions without homes. That is a choice. A continent pretending the two facts are unrelated.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(44)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(44)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(44)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="06" data-type="detonator" id="card-45">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 06 — Housing</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Legal dysfunction<br>feeds the predator<br>it claims to resist.</p><div class="det-rule"></div><p class="det-sub">200,000 private rental homes lost in France. When landlords face slow, asymmetric legal systems, many exit. The supply is captured by institutional players with lawyers, scale, and patience.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(45)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(45)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(45)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="06" data-type="evidence" id="card-46">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 06 — Housing</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">9.6M</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">homes missing across Europe.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Shelter before speculation. Current construction reaches only 64% of what is needed. A continent that rebuilt itself from rubble can build homes again.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(46)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(46)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(46)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="07" data-type="detonator" id="card-47">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">PROHIBITION DID NOT END DRUGS.<br><br>IT DECIDED WHO GETS PUNISHED.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(47)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(47)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(47)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="detonator" id="card-48">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Criminal markets don't check ID.<br><br>Regulated ones do.</p><div class="det-rule"></div><p class="det-sub">Regulation is not permissiveness. It is control.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(48)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(48)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(48)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="fix" id="card-49">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Treating addiction as a crime fills prisons.<br><br>Treating it as a health condition empties them.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">The evidence has been consistent for fifty years.</span>
+      <p class="fix-block-body">Every metric worsened under prohibition: use, purity, violence, cost.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(49)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(49)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(49)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="evidence" id="card-50">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">80%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">reduction in drug deaths in Portugal.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Within a decade of decriminalisation. The catastrophe critics predicted did not arrive. Stigma fell. Treatment became reachable. Harm declined.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(50)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(50)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(50)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="detonator" id="card-51">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">The war on drugs<br>was not lost.<br><br>It was never winnable by<br>the methods used to fight it.</p><div class="det-rule"></div><p class="det-sub">Every metric worsened under prohibition: use, purity, violence, cost. The evidence has been consistent for fifty years.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(51)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(51)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(51)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="detonator" id="card-52">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">A class-warped system sends Miguel to prison for three grams<br>and lets the Canary Wharf trader<br>walk to a Bloomberg terminal.</p><div class="det-rule"></div><p class="det-sub">An AI-enforced boundary on actual harm does not know a postcode. It knows behaviour.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(52)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(52)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(52)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="evidence" id="card-53">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">6,000+</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">overdose deaths in Europe in 2021.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Nobody chooses the poison they did not know was there. Prohibition makes purity invisible, accountability impossible, and contamination profitable.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(53)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(53)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(53)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="evidence" id="card-54">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">95%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">fewer HIV infections among drug users in Portugal.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Treatment works better than theatre. Portugal decriminalised use and built health infrastructure around it. Harm declined.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(54)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(54)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(54)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="07" data-type="fix" id="card-55">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 07 — Drug Policy</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">The fall should not have to be fatal.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">A mature society builds a floor.</span>
+      <p class="fix-block-body">When people use under medical supervision, they survive long enough to recover.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(55)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(55)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(55)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="detonator" id="card-56">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">A civilization is defined<br>by what it refuses<br>to tolerate.</p><div class="det-rule"></div><p class="det-sub">Europe refuses to tolerate the destruction of the conditions that make civilization possible.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(56)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(56)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(56)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="fix" id="card-57">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Net zero is not an<br>environmental<br>commitment.<br><br>It is an infrastructure project.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">The question is who builds it — and who profits.</span>
+      <p class="fix-block-body">The green industrial base is already being built. The question is who scales it.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(57)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(57)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(57)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="evidence" id="card-58">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€800bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">estimated annual cost of climate inaction by 2050.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">That is not an environmental price tag. It is an economic one. Inaction is not the cheap option.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(58)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(58)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(58)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="detonator" id="card-59">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">We banned lead in paint<br>when we understood<br>what it did to children.</p><div class="det-rule"></div><p class="det-sub">The damage from carbon was understood in 1988. The response followed thirty years later. That gap has a price.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(59)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(59)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(59)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="fix" id="card-60">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">The countries leading<br>the energy transition<br>are not sacrificing growth.<br><br>They are capturing it.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">Denmark. Germany. Spain.</span>
+      <p class="fix-block-body">The green industrial base is already built. The question is who scales it.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(60)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(60)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(60)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="evidence" id="card-61">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">36</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">critical climate risks already at dangerous levels.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Not projected for 2050. Happening now. Eight classified as urgent. This is not a future problem.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(61)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(61)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(61)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="08" data-type="detonator" id="card-62">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t1">We cannot<br>drink GDP.</p><div class="det-rule-white"></div><p class="det-sub-white">The 2021 floods in Germany and Belgium showed what happens when historical drainage meets a climate that no longer respects historical norms. The water does not care what the budget cycle says.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(62)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(62)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(62)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="detonator" id="card-63">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">You cannot bomb a heatwave<br>or sanction a drought.</p><div class="det-rule"></div><p class="det-sub">Europe still treats climate as an environmental file. It is a security file. Energy, water, food, health, transport — all under simultaneous pressure.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(63)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(63)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(63)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="detonator" id="card-64">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Forests are not scenery.<br>They are defence systems.</p><div class="det-rule"></div><p class="det-sub">35–50% of EU crop pollination depends on pollinators. Soils, wetlands, rivers, forests — these are food security, flood control, water storage, and survival infrastructure.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(64)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(64)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(64)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="08" data-type="fix" id="card-65">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 08 — Climate</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Buildings consume 40% of Europe's energy.<br>Retrofit or regret.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">The fastest energy source is the energy Europe stops wasting.</span>
+      <p class="fix-block-body">Insulation, heat pumps, solar, storage — not as home improvement, but as continental resilience.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(65)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(65)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(65)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="detonator" id="card-66">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Europe cannot be a regulatory superpower<br>and a military dependency.</p><div class="det-rule"></div><p class="det-sub">Strategic autonomy is not isolationism. It is the precondition for every other ambition.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(66)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(66)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(66)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="evidence" id="card-67">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€100bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">annual cost of European defence fragmentation.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">27 armies. 17 main battle tank variants. The duplication is not strength. It is money spent producing redundancy rather than capability.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(67)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(67)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(67)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="evidence" id="card-68">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">178 vs 30</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">European weapons systems vs American.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">€18 to €57 billion a year in procurement inefficiency — money spent producing redundancy rather than capability.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(68)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(68)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(68)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="detonator" id="card-69">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">The hardware sits in Europe.<br><br>The ignition key does not.</p><div class="det-rule"></div><p class="det-sub">European F-35s rely on American software, GPS, and satellite infrastructure. A decision made in California can ground a European fleet.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(69)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(69)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(69)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="09" data-type="detonator" id="card-70">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t1">Built on<br>borrowed safety.</p><div class="det-rule-white"></div><p class="det-sub-white">The Soviet Union was the threat. America was the guarantor. The lines were clear. They are not clear now.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(70)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(70)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(70)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="fix" id="card-71">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Europe has<br>the mechanism.<br><br>The question is<br>whether it has<br>the political will to use it.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">5,000 EU Rapid Deployment troops now operational.</span>
+      <p class="fix-block-body">The architecture exists. The test is political, not military.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(71)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(71)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(71)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="detonator" id="card-72">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">A private citizen should not<br>hold a battlefield switch.</p><div class="det-rule"></div><p class="det-sub">Hundreds of thousands of Starlink terminals in Ukraine. Modern warfare runs on communications. Ukraine showed what happens when that layer depends on one company, one owner, one judgement call outside democratic command.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(72)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(72)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(72)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="detonator" id="card-73">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">The border was never shared.<br>The burden was.</p><div class="det-rule"></div><p class="det-sub">Italy and Greece absorbed 70% of arrivals. A common border cannot be defended by the countries unlucky enough to be closest to the sea.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(73)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(73)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(73)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="09" data-type="evidence" id="card-74">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">40% vs 5%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">asylum approval — Germany vs Hungary.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Same law. Different Europe. A common asylum system that produces wildly different outcomes is not common. It is 27 national systems wearing a European letterhead.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(74)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(74)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(74)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="09" data-type="detonator" id="card-75">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 09 — Defence</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">A SUPERPOWER<br>DIVIDED INTO 27 STATES<br><br>IS NOT A SUPERPOWER.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(75)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(75)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(75)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="detonator" id="card-76">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Remove it, and everything built upon<br>the preceding nine pillars fails —<br>not gradually, but completely.</p><div class="det-rule"></div><p class="det-sub">Judicial failure is not one malfunction among many. It is the mechanism that makes every other malfunction permanent.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(76)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(76)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(76)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="detonator" id="card-77">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Every tyranny<br>begins the same way.</p><div class="det-rule"></div><p class="det-sub">First the courts. Then the press. Then the vote. The sequence is not accidental. It is the architecture of capture.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(77)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(77)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(77)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="detonator" id="card-78">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">When Poland forced thirty Supreme Court judges into retirement,<br>it did not exercise sovereignty.<br>It exercised power over it.</p><div class="det-rule"></div><p class="det-sub">Sovereignty is the capacity to govern by rules you chose. It is not the power to do whatever you wish to the citizens you govern.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(78)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(78)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(78)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="detonator" id="card-79">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Abstract judicial tradition sounds more defensible<br>than Amara's six years of waiting.</p><div class="det-rule"></div><p class="det-sub">The opposition argues for a system. The reforms argue for the people the system was built to serve.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(79)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(79)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(79)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="detonator" id="card-80">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Autocracy does not announce itself.<br>It files paperwork.</p><div class="det-rule"></div><p class="det-sub">274 judges forced into early retirement. Hungary did not need tanks to reshape the courts. It used retirement rules, appointments, budgets, and procedure. The legal language stayed. The independence left.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(80)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(80)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(80)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="evidence" id="card-81">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">6 years</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">average wait for serious criminal cases in France.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Justice delayed is justice deleted. The system has not delivered justice. It has outwaited the citizen.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(81)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(81)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(81)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="evidence" id="card-82">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">23%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of Europeans trust national judicial independence.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">The law is the load-bearing wall. When that assumption fails, healthcare, housing, tax, wages, and rights become decorative.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(82)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(82)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(82)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="evidence" id="card-83">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€120bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">lost annually to corruption in Europe.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">That is the school not built, the road overpaid, the nurse not hired, the honest tender that lost to the connected one.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(83)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(83)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(83)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="10" data-type="fix" id="card-84">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 10 — Justice</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Europe's tools work<br>when Europe uses them.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">95% conviction rate for EPPO cases.</span>
+      <p class="fix-block-body">The scandal is not that Europe lacks architecture. It is that the architecture is still too narrow, too late, and too optional.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(84)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(84)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(84)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="11" data-type="detonator" id="card-85">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Truth requires<br>funding.<br><br>Lies spread<br>for free.</p><div class="det-rule"></div><p class="det-sub">27,000 journalist positions lost in Europe since 2010. The void was not left empty.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(85)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(85)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(85)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="11" data-type="detonator" id="card-86">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Democracies don't die from lack of outrage.<br>They die from lack of investigation.</p><div class="det-rule"></div><p class="det-sub">Investigative journalism produces more recovered public money than it costs by orders of magnitude.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(86)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(86)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(86)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="11" data-type="detonator" id="card-87">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Her murder sent a message heard across Europe:<br>silence costs less than truth.</p><div class="det-rule"></div><p class="det-sub">Daphne Caruana Galizia was killed with a car bomb in Malta in 2017. She was investigating corruption at the highest levels of government.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(87)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(87)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(87)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="11" data-type="detonator" id="card-88">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">You cannot defend democracy<br>if you cannot recognize propaganda.</p><div class="det-rule"></div><p class="det-sub">In 2023, fabricated audio shaped a Slovak election result. The platform faced no penalty. The algorithm operated exactly as designed.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(88)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(88)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(88)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="11" data-type="detonator" id="card-89">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">Every unchecked algorithm<br>is a weapon left on the table.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(89)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(89)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(89)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="11" data-type="detonator" id="card-90">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">Chaos is profitable<br>when clarity isn't.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(90)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(90)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(90)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="11" data-type="evidence" id="card-91">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">69%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of Europeans actively avoid news.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">People are not stupid. They are exhausted. When the information system floods citizens with outrage and helplessness, disengagement becomes a rational survival strategy.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(91)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(91)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(91)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="11" data-type="evidence" id="card-92">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 11 — Media</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">70%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of YouTube viewing shaped by recommendations.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Platforms do not need to intend democratic damage to produce it. Systems optimised for addiction will reliably deliver exactly that.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(92)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(92)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(92)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="12" data-type="detonator" id="card-93">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t3">OPACITY IS NOT<br>NEUTRALITY.<br><br>IT IS A SUBSIDY FOR THOSE WHO<br>BENEFIT FROM NOT<br>BEING SEEN.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(93)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(93)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(93)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="fix" id="card-94">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Transparency is<br>not idealism.<br><br>It is engineering.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">Public money that cannot be traced is public money that can be stolen.</span>
+      <p class="fix-block-body">Every contract published. Every owner named. Every absence counted.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(94)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(94)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(94)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="detonator" id="card-95">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Neglect is the<br>softest form<br>of corruption.</p><div class="det-rule"></div><p class="det-sub">No envelope changes hands. No order is given. The system simply continues, unreformed, serving those who benefit from its dysfunction.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(95)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(95)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(95)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="fix" id="card-96">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Trust is not declared.<br><br>It is demonstrated.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">Every contract published. Every owner named.</span>
+      <p class="fix-block-body">Every absence counted. Every violation prosecuted. Every outcome visible.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(96)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(96)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(96)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="evidence" id="card-97">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€55bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">stolen via CumEx — the largest fraud in European history.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Uncovered by journalists, not regulators. The architecture of concealment was legal in the jurisdictions that provided it.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(97)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(97)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(97)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="detonator" id="card-98">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Corruption does not need brilliance.<br><br>It needs darkness.</p><div class="det-rule"></div><p class="det-sub">16 years paid for no work. The money moved because nothing in the architecture required it to stop.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(98)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(98)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(98)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="evidence" id="card-99">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">47%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of EU public tenders receive only one bid.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Single-bid contracts consistently cost more because competition was removed before the invoice arrived.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(99)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(99)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(99)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="evidence" id="card-100">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€55–92bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">lost annually through procurement failures.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Compliance is not transparency. A system can publish enough to satisfy procedure and still hide enough to lose billions.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(100)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(100)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(100)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="12" data-type="detonator" id="card-101">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 12 — Anti-Corruption</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">The patient waiting.<br>The nurse covering.<br><br>The taxpayer funding it all.</p><div class="det-rule"></div><p class="det-sub">They pay the price of institutions designed not to notice. Absence becomes corruption when the system chooses not to see it.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(101)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(101)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(101)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="detonator" id="card-102">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">The institutions know.<br><br>They have chosen to<br>treat low trust as<br>a communication problem.</p><div class="det-rule"></div><p class="det-sub">Not a governance problem.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(102)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(102)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(102)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="detonator" id="card-103">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Democracy's nervous system cannot run<br>on someone else's infrastructure.</p><div class="det-rule"></div><p class="det-sub">Estonia built X-Road. Denmark built MitID. Europe built the regulatory framework for AI it does not control. The sequence matters.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(103)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(103)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(103)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="13" data-type="detonator" id="card-104">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">Institutions are where democracy<br>either lives or dies.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(104)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(104)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(104)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="detonator" id="card-105">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">In Stockholm, a credit card<br>purchase ends a political career.<br><br>In Paris, 135 civil servants<br>not showing up<br>is called solidarity.</p><div class="det-rule"></div><p class="det-sub">The distance between those two sentences is the distance between institutional trust and institutional collapse.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(105)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(105)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(105)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="evidence" id="card-106">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">39%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of citizens can name an EU-funded project near them.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">You cannot trust what you cannot see. Citizens do not defend institutions they experience as fog.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(106)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(106)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(106)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="fix" id="card-107">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">A state that respects citizens<br>does not make them repeat<br>what it already knows.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">96.6% of Danes over 15 have digital ID.</span>
+      <p class="fix-block-body">Simple, fast, visible public service is not convenience. It is trust made operational.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(107)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(107)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(107)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="evidence" id="card-108">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">0.001%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">respond to EU public consultations.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Participation that changes nothing is not participation. People have learned that most consultations absorb input without consequence.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(108)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(108)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(108)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="13" data-type="fix" id="card-109">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 13 — Institutions</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Public money must leave footprints.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">Contracts over €5,000 published within 48 hours.</span>
+      <p class="fix-block-body">Not because every citizen will check. Because every official must know someone can.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(109)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(109)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(109)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="detonator" id="card-110">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Regulatory sophistication<br>without technological sovereignty<br>is influence without power.</p><div class="det-rule"></div><p class="det-sub">Europe wrote the rules for AI it does not build, on infrastructure it does not own, for a technology race it is not winning.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(110)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(110)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(110)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="14" data-type="detonator" id="card-111">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t2">PROTECTION<br>WITHOUT<br>PROPULSION<br>IS PARALYSIS.</p><div class="det-rule-white"></div></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(111)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(111)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(111)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="evidence" id="card-112">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">400,000</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label"><br>STEM graduates left Europe between 2010 and 2020.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Emma did not leave because Europe was worse to live in. She left because her work would matter more elsewhere. Talent follows systems that value it.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(112)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(112)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(112)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="detonator" id="card-113">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">AI amplifies whoever holds it.<br>Private hands means extraction.<br>Democratic hands means circulation.</p><div class="det-rule"></div><p class="det-sub">The infrastructure question is not technical. It is political. Who controls the compute controls the future.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(113)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(113)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(113)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="evidence" id="card-114">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€750bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">annual investment gap — the Draghi Report.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">What Europe needs to spend to close the technology and green transition deficit. Per year. The number is not a wish. It is an engineering requirement.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(114)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(114)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(114)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="detonator" id="card-115">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Europe invents the<br>lightbulb, then asks<br>someone else<br>to switch it on.</p><div class="det-rule"></div><p class="det-sub">Zero European companies in the global top 15 tech firms. Europe produces breakthroughs, trains talent, funds the science. Then others commercialise it, scale it, own it, and sell it back.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(115)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(115)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(115)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="evidence" id="card-116">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€40bn vs €240bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">European vs American venture capital.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">In practice, European founders face 27 rulebooks. The American startup scales across one market. The European startup negotiates a maze.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(116)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(116)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(116)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="14" data-type="evidence" id="card-117">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 14 — Technology</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">73%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of European capital goes to later-stage firms.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Caution protects what exists. It does not build what comes next. The economy that finances unproven ideas defines the next decade.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(117)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(117)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(117)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card card-purple" data-pillar="15" data-type="detonator" id="card-118">
+  <div class="card-top"><span class="eyebrow" style="color:rgba(255,255,255,0.35)">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:rgba(255,255,255,0.15)"></div>
+  <div class="card-body"><p class="det-white-t1">SOMEONE ELSE<br>OWNS THE HIVE.</p><div class="det-rule-white"></div><p class="det-sub-white">Five American platforms set the terms of access to European audiences, collect the revenue, and reinvest elsewhere.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(118)" style="color:rgba(255,255,255,0.35)">Copy →</button>
+    <button class="act" onclick="screenshotCard(118)" style="color:rgba(255,255,255,0.35)">Download →</button>
+    <button class="act" onclick="shareCard(118)" style="color:rgba(255,255,255,0.35)">Share →</button>
+  </div>
+  <div class="brand" style="color:rgba(255,255,255,0.2)">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="15" data-type="detonator" id="card-119">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t2">Someone decided<br>that Beethoven was German.</p><div class="det-rule"></div><p class="det-sub">33 European traditions are officially recognised by UNESCO as belonging simultaneously to multiple nations. Heritage has never respected the lines nationalists drew across it.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(119)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(119)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(119)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="15" data-type="detonator" id="card-120">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body"><p class="det-t3">Léa crossed three borders<br>to discover she had never left home.</p><div class="det-rule"></div><p class="det-sub">Erasmus has moved 13 million people across European borders since 1987. The generation that grew up with it has a different relationship to European identity than the one that built it.</p></div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(120)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(120)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(120)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="15" data-type="evidence" id="card-121">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">92%</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">of Luxembourgers feel European.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Not instead of feeling Luxembourgish — alongside it. The framing that treats European and national identity as competitors is constructing a conflict that serves particular interests.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(121)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(121)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(121)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="15" data-type="evidence" id="card-122">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="stat-num">€8bn</p>
+    <div class="stat-rule"></div>
+    <p class="stat-label">Netflix European subscription revenue.</p>
+  </div>
+  <div class="mid-hairline"></div>
+  <div class="stat-body">Fraction reinvested in locally produced content: negligible. If you profit from the hive, you tend the hive. The streaming contribution changes that.</div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(122)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(122)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(122)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="15" data-type="fix" id="card-123">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">We are already united.<br>We just forgot to look.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">2,000 years of shared inheritance.</span>
+      <p class="fix-block-body">Before Brussels, before Schengen, before the euro, Europe&#x27;s stories, recipes, laws, melodies, and ideas were already crossing borders.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(123)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(123)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(123)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+<div class="card" data-pillar="15" data-type="fix" id="card-124">
+  <div class="card-top"><span class="eyebrow" style="color:#aaa">Pillar 15 — Cultural Identity</span></div>
+  <div class="top-hairline" style="background:#e0e0e0"></div>
+  <div class="card-body">
+    <p class="fix-head">Belonging is not propaganda.<br>It is memory restored.</p>
+    <div class="fix-rule"></div>
+    <div class="fix-block">
+      <span class="fix-block-label">18-point rise in European identity among Estonian youth.</span>
+      <p class="fix-block-body">When Estonia taught European history as a connected story, young people felt more European. A civilisation survives by recognising itself.</p>
+    </div>
+  </div>
+  <div class="card-foot">
+    <button class="act" onclick="copyCard(124)" style="color:#888">Copy →</button>
+    <button class="act" onclick="screenshotCard(124)" style="color:#888">Download →</button>
+    <button class="act" onclick="shareCard(124)" style="color:#888">Share →</button>
+  </div>
+  <div class="brand" style="color:#bbb">Blueprint for a New Europe</div>
+</div>
+</div>
+
+<footer class="footer">
+  <span class="footer-copy">© 2026 Aiteall Editions. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://blueprintforaneweurope.github.io/Sources/">Sources</a>
+    <a href="https://blueprint-for-a-new-europe-9fa293.webflow.io">Blueprint for a New Europe</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+var activeType='all', activePillar='all';
+
+function showToast(msg){
+  var t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show')},2000);
+}
+
+function filterCards(){
+  var cards=document.querySelectorAll('.card');
+  cards.forEach(function(c){
+    var tp=c.dataset.type, pl=c.dataset.pillar;
+    var show=(activeType==='all'||tp===activeType)&&(activePillar==='all'||pl===activePillar);
+    c.classList.toggle('hidden',!show);
+  });
+}
+
+document.querySelectorAll('.type-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.type-btn').forEach(function(x){x.classList.remove('on')});
+    this.classList.add('on');activeType=this.dataset.type;filterCards();
+  });
+});
+
+document.querySelectorAll('.pillar-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    if(this.classList.contains('on')){
+      this.classList.remove('on');activePillar='all';
+    } else {
+      document.querySelectorAll('.pillar-btn').forEach(function(x){x.classList.remove('on')});
+      this.classList.add('on');activePillar=this.dataset.pillar;
+    }
+    filterCards();
+  });
+});
+
+function getCardText(id){
+  var c=document.getElementById('card-'+id);
+  if(!c)return'';
+  return c.innerText.replace(/Copy →.*$/s,'').trim();
+}
+
+function copyCard(id){
+  navigator.clipboard.writeText(getCardText(id)).then(function(){showToast('Copied')});
+}
+
+function shareCard(id){
+  var url=window.location.href.split('#')[0]+'#card-'+id;
+  if(navigator.share){navigator.share({url:url})}
+  else{navigator.clipboard.writeText(url).then(function(){showToast('Link copied')})}
+}
+
+function screenshotCard(id){
+  var card=document.getElementById('card-'+id);
+  html2canvas(card,{scale:2,backgroundColor:null,useCORS:true}).then(function(canvas){
+    var a=document.createElement('a');
+    a.download='blueprint-'+id+'.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();showToast('Card saved');
+  });
+}
+
+filterCards();
+</script>
+</body>
+</html>
